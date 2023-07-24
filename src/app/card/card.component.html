@@ -1,0 +1,13 @@
+<h3>{{inputValue}}</h3>
+<input [(ngModel)]="inputValue" (ngModelChange)="updateInputValue()" />
+    <button (click)="readInputValue()">Refresh</button>
+<ul class="games-list">
+    <li class="game-item" *ngFor="let game of games">
+        <img class="game-image" src="{{game.thumbnail}}" alt="{{game.title}}">
+        <span>{{game.title | titlecase}}</span>
+        <div class="game-description">{{game.short_description}}<br><br> 
+            <a (click)="getMoreInfo(game)" (click)="sendValue()" class="more-info" routerLink="/game-info">More info</a> 
+        </div>
+        
+    </li>
+</ul>

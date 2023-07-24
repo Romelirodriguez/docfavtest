@@ -1,0 +1,21 @@
+<div class="game-info-container">
+    <h2>{{game.title}}</h2>
+    <img src="{{game.thumbnail}}" alt="">
+    <p>{{game.short_description}}</p>
+    <a class="homepage" href="{{game.game_url}}" target="_blank">Game Homepage</a>
+    <table>
+        <tr>
+            <td><strong>{{game.genre}}</strong></td>
+            <td><strong>{{game.platform}}</strong></td>
+        </tr>
+        <tr>
+            <td>{{game.publisher}}</td>
+            <td>{{game.developer}}</td>
+        </tr>
+        <tr>
+            <td>{{game.release_date}}</td>
+            <td><a href="{{game.freetogame_profile_url}}">Freetogame Url</a></td>
+        </tr>
+    </table>
+</div>
+<button class="go-home" [routerLink]="'/'"> Go Home</button>

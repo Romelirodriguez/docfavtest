@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'docfav-forntend-test';
+  show:boolean = true;
+  title = 'Test FrontEnd';
+  receivedValue: string = '';
+
+  showAllGames() {
+    this.show = false;
+  }
+  hideAllGames(){
+    this.show = false;
+  }
+
+  getValue(value: string) {
+    this.receivedValue = value;
+    if( value != undefined ){
+      this.show = false;
+    }
+  }
+
 }
